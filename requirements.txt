@@ -1,0 +1,6 @@
+django
+django-cors-headers==3.7.0
+django-filter
+django-graphql-jwt
+psycopg2
+graphene_django
