@@ -1,3 +1,9 @@
+up:
+	docker-compose up -d
+	
+down:
+	docker-compose down
+
 makemigrations:
 	docker-compose run --rm web python3 manage.py makemigrations
 

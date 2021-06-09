@@ -29,6 +29,7 @@ class DeptCreateMutation(relay.ClientIDMutation):
         )
 
 
+
 class DepartmentNode(DjangoObjectType):
     class Meta:
         model = Department
@@ -46,7 +47,7 @@ class Query(graphene.ObjectType):
     def resolve_employee(self, info, **kwargs):
         id = kwargs.get('id')
         if id is not None:
-            return Employee.objects.get(id=from_global_id(id)[1])
+            return Employee.objects.get(id=flogin_requiredrom_global_id(id)[1])
 
     @login_required
     def resolve_all_employees(self, info, **kwargs):
