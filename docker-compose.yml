@@ -1,11 +1,11 @@
 version: "3"
 services:
-  db:
-    image: postgres
-    ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_PASSWORD: secret
+  # db:
+  #   image: postgres
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_PASSWORD: secret
   web:
     build: .
     volumes:
@@ -14,5 +14,5 @@ services:
       - "8000:8000"
     env_file: docker-compose.env
     command: python manage.py runserver 0.0.0.0:8000
-    depends_on:
-      - db
+    # depends_on:
+    #   - db
