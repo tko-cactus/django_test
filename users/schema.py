@@ -35,7 +35,7 @@ class CreateUserMutation(relay.ClientIDMutation):
         return CreateUserMutation(user=user)
 
 
-class Mutation(graphene.AbstractType):
+class Mutation(object):
     create_user = CreateUserMutation.Field()
     token_auth = graphql_jwt.ObtainJSONWebToken.Field()
 
